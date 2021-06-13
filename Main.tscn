@@ -16,7 +16,7 @@ _data = {
 script = ExtResource( 3 )
 Mob = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.0784314, 0.0470588, 0.305882, 1 )
@@ -55,4 +55,5 @@ stream = ExtResource( 6 )
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="options_changed" from="HUD" to="." method="new_player_settings"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

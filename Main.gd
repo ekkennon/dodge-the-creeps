@@ -51,3 +51,8 @@ func _on_MobTimer_timeout():
 	# velocity is speed and direction
 	mob.linear_velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
 	mob.linear_velocity = mob.linear_velocity.rotated(direction)
+
+func new_player_settings(options):
+	if options.has("color"):
+		$Background.color = options["color"]
+	
